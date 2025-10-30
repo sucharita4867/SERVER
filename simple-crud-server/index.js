@@ -47,7 +47,6 @@ async function run() {
 
     //     ass database related apis here
     app.post("/users", async (req, res) => {
-      // console.log("hitting the users post api");
       const newUser = req.body;
       console.log("user info", newUser);
       const result = await usersCollection.insertOne(newUser);
